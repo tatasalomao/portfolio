@@ -15,10 +15,10 @@ a:hover {
 body {
   font-family: montserrat;
 }
-
+.h1,
 h1 {
   color: #ffffff;
-  font-size: 1px;
+  font-size: 0.1em;
 }
 
 h2 {
