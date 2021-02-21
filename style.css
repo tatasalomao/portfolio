@@ -129,14 +129,14 @@ ul.navbar-nav {
   .container {
     padding: 0em 5em;
   }
+  @media screen and (min-width: 360px) .navbar, .container {
+    padding: 0em 2.5em;
+  }
 
   h2 {
     color: #be1622;
     margin: 1em 0em 0em;
   }
-}
-@media screen and (min-width: 360px) .navbar, .container {
-  padding: 0em 3em;
 }
 
 /* tio´s tips 
