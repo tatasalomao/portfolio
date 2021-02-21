@@ -123,21 +123,23 @@ ul.navbar-nav {
 @media screen and (min-width: 360px) {
   .navbar-light .navbar-nav .nav-link {
     padding: 0em 0.5em;
-  }
+  }}
 
   .navbar,
   .container {
     padding: 0em 5em;
   }
-  @media screen and (min-width: 360px) .navbar, .container {
+  @media screen and (min-width: 360px) {
+  .navbar, .container {
     padding: 0em 2.5em;
-  }
+  }}
 
   h2 {
     color: #be1622;
     margin: 1em 0em 0em;
   }
 }
+
 
 /* tio´s tips 
 
