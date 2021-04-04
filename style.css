@@ -5,7 +5,6 @@ p {
 a {
   color: #000000;
   font-weight: 300;
-  vertical-align: middle;
 }
 
 a:hover {
@@ -56,9 +55,7 @@ div img {
   display: block;
   
 }
-svg {
-  vertical-align: middle;
-}
+svg {}
 
 .img-tata {
   width: 80%;
