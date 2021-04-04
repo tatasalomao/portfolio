@@ -5,6 +5,7 @@ p {
 a {
   color: #000000;
   font-weight: 300;
+  vertical-align: middle;
 }
 
 a:hover {
@@ -28,6 +29,7 @@ h2 {
 
 h2#cases {
   color: #ffffff;
+  font-weight: 600;
 }
 
 ul {
@@ -43,6 +45,7 @@ li {
 .h4,
 h4 {
   font-size: 1.25em;
+  font-weight: 700;
   margin: 0.5em 0em;
   color: purple;
 }
@@ -51,6 +54,10 @@ h4 {
 
 div img {
   display: block;
+  
+}
+svg {
+  vertical-align: middle;
 }
 
 .img-tata {
