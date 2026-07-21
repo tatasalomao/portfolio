@@ -1,152 +1,486 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0YCGHEWXW4"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Taís Aline Baptista — Service Designer &amp; Business Analyst</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		gtag('config', 'G-0YCGHEWXW4');
-	</script>
-	<!-- Meta tags Obrigatórias -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:image" content="https://tatasalomao.github.io/portfolio/img/tata.png">
-	<meta property="og:image:user_generated" content="true">
-	<meta property="og:image:height" content="250">
-	<meta name="twitter:image" content="https://tatasalomao.github.io/portfolio/img/tata.png">
-	<meta property="og:image:width" content="300">
-	<meta property="og:title" content="Portfólio Taís Aline">
-	<meta property="og:owners" content="Taís Aline Baptista Salomão">
-	<meta property="og:site_name" content="Github">
+  :root {
+    --sf-blue:       #0070d2;
+    --sf-blue-dark:  #005fb2;
+    --sf-blue-light: #e8f4fd;
+    --sf-navy:       #032d60;
+    --sf-teal:       #0b827c;
+    --sf-teal-light: #e0f5f4;
+    --sf-cloud:      #f3f3f3;
+    --sf-white:      #ffffff;
+    --sf-border:     #dddbda;
+    --sf-text:       #080707;
+    --sf-muted:      #706e6b;
+    --sf-label:      #3e3e3c;
+    --sf-success:    #2e844a;
+    --sf-badge-bg:   #e8f4fd;
+    --sf-badge-col:  #005fb2;
+    --sf-purple-bg:  #f3e9fb;
+    --sf-purple-col: #7526c9;
+    --sf-teal-bg:    #e0f5f4;
+    --sf-teal-col:   #0b6b66;
+  }
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  body {
+    font-family: "Salesforce Sans", -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--sf-text);
+    background: var(--sf-cloud);
+  }
 
-	<title>Portfólio Taís Aline</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="img\tata2.svg">
+  a { color: var(--sf-blue); text-decoration: none; }
+  a:hover { text-decoration: underline; color: var(--sf-blue-dark); }
+
+  .topbar { background: var(--sf-navy); height: 6px; }
+
+  .hero { background: var(--sf-white); border-bottom: 1px solid var(--sf-border); }
+  .hero-banner {
+    background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue) 100%);
+    height: 110px;
+  }
+  .hero-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px 32px;
+    position: relative;
+  }
+  .avatar {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    background: var(--sf-white);
+    color: var(--sf-blue);
+    font-size: 30px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--sf-white);
+    position: relative;
+    top: -48px;
+    margin-bottom: -28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    letter-spacing: 1px;
+  }
+  .hero-info { padding-top: 8px; }
+  .hero h1 { font-size: 26px; font-weight: 700; color: var(--sf-navy); letter-spacing: -0.2px; margin-bottom: 4px; }
+  .hero .headline { font-size: 14px; color: var(--sf-muted); margin-bottom: 4px; }
+  .hero .location { font-size: 13px; color: var(--sf-muted); margin-bottom: 20px; }
+
+  .contact-links { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid var(--sf-blue);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sf-blue);
+    background: var(--sf-white);
+    transition: background 0.15s;
+  }
+  .btn-contact:hover { background: var(--sf-blue-light); text-decoration: none; }
+  .btn-contact.primary { background: var(--sf-blue); color: var(--sf-white); border-color: var(--sf-blue); }
+  .btn-contact.primary:hover { background: var(--sf-blue-dark); }
+  .btn-contact.disabled {
+    color: var(--sf-muted);
+    border-color: var(--sf-border);
+    background: var(--sf-cloud);
+    cursor: default;
+    opacity: 0.75;
+  }
+  .btn-contact.disabled:hover { background: var(--sf-cloud); text-decoration: none; }
+
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card { background: var(--sf-white); border: 1px solid var(--sf-border); border-radius: 6px; overflow: hidden; }
+  .card-header {
+    background: var(--sf-cloud);
+    border-bottom: 1px solid var(--sf-border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card-header-icon {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--sf-white);
+    flex-shrink: 0;
+  }
+  .icon-blue   { background: var(--sf-blue); }
+  .icon-navy   { background: var(--sf-navy); }
+  .icon-teal   { background: var(--sf-teal); }
+  .icon-purple { background: #7526c9; }
+  .icon-green  { background: var(--sf-success); }
+  .icon-gold   { background: #b56b00; }
+
+  .card-title { font-size: 13px; font-weight: 700; color: var(--sf-label); text-transform: uppercase; letter-spacing: 0.8px; }
+  .card-body { padding: 20px; }
+
+  .about-text { font-size: 14px; color: var(--sf-text); line-height: 1.75; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
+  .skill-group h4 {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--sf-muted);
+    margin-bottom: 8px; border-bottom: 2px solid var(--sf-border); padding-bottom: 4px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .tag { font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 12px; }
+  .tag-blue   { background: var(--sf-badge-bg);  color: var(--sf-badge-col); }
+  .tag-purple { background: var(--sf-purple-bg);  color: var(--sf-purple-col); }
+  .tag-teal   { background: var(--sf-teal-bg);    color: var(--sf-teal-col); }
+  .tag-gray   { background: #f3f2f2; color: var(--sf-label); }
+
+  .exp-list { display: flex; flex-direction: column; }
+  .exp-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--sf-border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 16px;
+  }
+  .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .exp-item:first-child { padding-top: 0; }
+  .exp-company { font-size: 11px; font-weight: 700; color: var(--sf-blue); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
+  .exp-role { font-size: 14px; font-weight: 600; color: var(--sf-navy); margin-bottom: 2px; }
+  .exp-location { font-size: 12px; color: var(--sf-muted); margin-bottom: 10px; }
+  .exp-period { font-size: 12px; color: var(--sf-muted); text-align: right; white-space: nowrap; padding-top: 2px; }
+  .exp-desc { font-size: 13px; color: var(--sf-label); line-height: 1.65; grid-column: 1 / -1; }
+  .exp-desc ul { padding-left: 16px; margin-top: 6px; }
+  .exp-desc li { margin-bottom: 4px; }
+
+  .edu-list { display: flex; flex-direction: column; }
+  .edu-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--sf-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .edu-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .edu-item:first-child { padding-top: 0; }
+  .edu-school { font-size: 14px; font-weight: 600; color: var(--sf-navy); }
+  .edu-course { font-size: 13px; color: var(--sf-muted); margin-top: 2px; }
+  .edu-period { font-size: 12px; color: var(--sf-muted); white-space: nowrap; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .cert-list { display: flex; flex-direction: column; gap: 10px; }
+  .cert-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--sf-label); }
+  .cert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sf-blue); margin-top: 5px; flex-shrink: 0; }
+
+  .award-list { display: flex; flex-direction: column; gap: 10px; }
+  .award-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--sf-label); }
+  .award-dot { width: 8px; height: 8px; border-radius: 50%; background: #b56b00; margin-top: 5px; flex-shrink: 0; }
+
+  .lang-list { display: flex; gap: 10px; flex-wrap: wrap; }
+  .lang-item {
+    background: var(--sf-cloud); border: 1px solid var(--sf-border);
+    border-radius: 4px; padding: 10px 18px; text-align: center; min-width: 120px;
+  }
+  .lang-name { font-weight: 700; font-size: 13px; color: var(--sf-navy); }
+  .lang-level { font-size: 11px; color: var(--sf-muted); margin-top: 2px; }
+
+  .footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--sf-border); text-align: center; font-size: 11px; color: var(--sf-muted); }
+
+  @media (max-width: 540px) {
+    .two-col { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 21px; }
+    .exp-item { grid-template-columns: 1fr; }
+    .exp-period { text-align: left; }
+  }
+</style>
 </head>
-
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- menu-->
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-					<li class="nav-item"><a class="nav-link" href="#sobremim">Apresentação</a></li>
-					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cases</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<li><a class="dropdown-item" href="https://xd.adobe.com/view/db568613-85b9-4c7d-b766-7bc77bd21856-8e05/?fullscreen">Cartão</a></li>
-							<li><a class="dropdown-item" href="convenio.html">Convênio</a></li>
-							<li><a class="dropdown-item" href="figmacv.html">FigmaCV</a></li>
-							<li><a class="dropdown-item" href="ws.html">Winter School</a></li>
-						</ul>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-				</ul>
-				<ul class="navbar-nav mt-2 mt-lg-0">
-					<img src="img\logo_protfa.svg" class="img-fluid" alt=" Responsive image" width="80%" />
-				</ul>
-			</div>
-		</nav>
-	</header>
 
-	<section id='painel'>
-		<!-- Olá-->
-		     <div class="container">
-			<h1> Portfólio Taís Aline Baptista Salomão</h1>
-			      <div class="row justify-content-md-center">
-				<div class="col-md-4" align="center"><img src="img\tata.svg" class="img-tata" alt="Responsive image" width="80%" /></div>
-				<div class="col-md-8"><br>
-					<h2 id="sobremim">Olá!</h2></br>
-					<p>Sou Taís Aline, estou concluíndo o curso de Design Visual (maio.21) na UFRGS e iniciando Sociologia na Uninter, tenho 8 anos de experiência com Design Gráfico, sendo mais de 2 anos dedicados ao UX/UI atuando com:
-					<p>- Pesquisa de similares (benchmarking), análise de stakeholders, Google Analytics, análise de usabilidade, mapa da empatia, arquitetura da informação, desenho de fluxos, wireframes, style guides, criação de layouts, prototipação e handoff e apresentação ao cliente.</p>
+<div class="topbar"></div>
 
-					<h4>Hard Skills:</h4>
-					<li>- Pacote Adobe: Photoshop, Illustrator, XD, InDesign;</li>
-					<li>- Figma;</li>
-					<li>- Programação front-end: HTML, CSS e Bootstrap.</li></br>
-					<br>
-					<h4>Soft Skills:</h4>
-					<li>- Compartilhamento de conhecimento;</li>
-					<li>- Trabalho colaborativo;</li>
-					<li>- Pensamento lógico.</li>
-				</div>
-			</div></br></br>
-		</div>
-		<!-- Portfólio-->
-		<div class="container-red">
-			<br>
-			<div class="container">
-				<h2 id="cases">CASES</h2></br>
-				<div class="container">
-					<div class="row justify-content-md-center">
-						<div class="col-md-6" align="center">
-							<div class="casesimg">
-								<a href="cartao.html"><img src="img\desafioux.png" alt="Desafio UX" height=auto></a>
-							</div>
-							<a align="center"> Cartão Combustíveis | DESAFIO UX</a>
-						</div>
+<div class="hero">
+  <div class="hero-banner"></div>
+  <div class="hero-body">
+    <div class="avatar">TA</div>
+    <div class="hero-info">
+      <h1>Taís Aline Baptista</h1>
+      <p class="headline">Service Designer  ·  Business Analyst  ·  Salesforce @IBM</p>
+      <p class="location">📍 Porto Alegre, Rio Grande do Sul, Brasil</p>
+      <div class="contact-links">
+        <a class="btn-contact primary" href="mailto:taisalineux@gmail.com">✉ E-mail</a>
+        <a class="btn-contact" href="https://www.linkedin.com/in/taisalinebaptista/" target="_blank">in LinkedIn</a>
+        <a class="btn-contact" href="https://github.com/tatasalomao" target="_blank">⌥ GitHub</a>
+        <span class="btn-contact disabled">◻ Cases</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-						<div class="col-md-6" align="center">
-							<div class="casesimg"><a href="convenio.html" /><img src="img\adobeXD.png" alt="Adobe XD" height=auto></a></div>
-							<a>Convênio Saúde | PROFISSIONAL</a>
-						</div>
-					</div>
-				</div></br></br>
-				<div class="container">
-					<div class="row justify-content-md-center">
-						<div class="col-md-6" align="center">
-							<div class="casesimg"><a href="figmacv.html" /><img src="img\figmaCV.png" alt="Figma" height=auto></a></div>
-							<a>CV Figma | PESSOAL </a>
-						</div>
-						<div class="col-md-6" align="center">
-							<div class="casesimg"><a href="ws.html"><img src="img\WinterSchool.png" alt="Winter School" height=auto></a></div>
-							<a>Winter School | PROFISSIONAL</a>
-						</div>
-					</div>
-				</div></br></br>
-			</div>
-		</div>
-		<!-- Contato-->
-		<div class="container"><br>
-			<h2 id="contato">VAMOS CONVERSAR</h2><br>
-			<p> Você pode me contatar pelos seguintes meios, chama lá! ;)</p>
-			<br>
-			<div class="row justify-content-md-center">
-				<div class="col-md-4" align="left">
-					<a href="https://t.me/taisaline" class="font-weight-bold" target="_blank"><embed type="image/svg+xml" src="img\telegram.svg" height="18px" width="auto" /> @TaisAline</a>
-				</div>
-				<div class="col-md-4" align="center">
-					<a href="https://www.linkedin.com/in/tata-salomao" class="font-weight-bold" target="_blank"><embed type="image/svg+xml" src="img\linkedin.svg" height="18px" width="auto" /> @tatasalomao</a>
-				</div>
-				<div class="col-md-4" align="right">
-					<a href="mailto:taisalineux@gmail.com?subject=Vamos%20conversar" class="font-weight-bold"><embed type="image/svg+xml" src="img\email.svg" height="18px" width="auto" /> taisalineux@gmail.com</a>
-				</div>
-			</div><br>
-		</div>
-		<br>
-	</section>
+<div class="wrapper">
 
-	<footer>
-		<div class="container-red" align="center">
-			<h6>Todos os direitos reservados | 2021©Taís Aline</h6>
-		</div>
-	</footer>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-header-icon icon-navy">✦</span>
+      <span class="card-title">Sobre</span>
+    </div>
+    <div class="card-body">
+      <p class="about-text">
+        Com bacharelado em Design Visual e mais de <strong>15 anos de atuação no mercado corporativo</strong>, especializei minha carreira na interseção entre <strong>Análise de Negócios, Service Design</strong> e o ecossistema <strong>Salesforce</strong>. Atuo no alinhamento estratégico entre necessidades do usuário, viabilidade técnica e metas de negócio, com foco em ecossistemas digitais complexos e de alta escala.
+      </p>
+      <p class="about-text" style="margin-top:12px">
+        Atualmente na IBM, lidero a jornada <strong>End-to-End de produtos digitais</strong>: desde facilitação de oficinas de co-criação, mapeamento de jornadas e testes de usabilidade, até a tradução de regras de negócio em <strong>User Stories, critérios de aceite e especificações técnicas funcionais</strong>. Tenho domínio prático em <strong>Salesforce Lightning Design System (SLDS)</strong> e Vlocity (Salesforce Industries).
+      </p>
+    </div>
+  </div>
 
-	<!-- JavaScript (Opcional) -->
-	<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-header-icon icon-blue">⚡</span>
+      <span class="card-title">Competências</span>
+    </div>
+    <div class="card-body">
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Design &amp; UX</h4>
+          <div class="tags">
+            <span class="tag tag-blue">Service Design</span>
+            <span class="tag tag-blue">UX Research</span>
+            <span class="tag tag-blue">Testes de Usabilidade</span>
+            <span class="tag tag-blue">Prototipagem</span>
+            <span class="tag tag-blue">Figma</span>
+            <span class="tag tag-blue">Mapeamento de Jornadas</span>
+            <span class="tag tag-blue">Wireframes</span>
+            <span class="tag tag-blue">Design System</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Business Analysis</h4>
+          <div class="tags">
+            <span class="tag tag-purple">User Stories</span>
+            <span class="tag tag-purple">Análise de Negócios</span>
+            <span class="tag tag-purple">Especificação Funcional</span>
+            <span class="tag tag-purple">Requisitos</span>
+            <span class="tag tag-purple">Liderança Funcional</span>
+            <span class="tag tag-purple">Liderança de Equipe</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Salesforce &amp; Tech</h4>
+          <div class="tags">
+            <span class="tag tag-teal">Salesforce SLDS</span>
+            <span class="tag tag-teal">Vlocity</span>
+            <span class="tag tag-teal">Salesforce Industries</span>
+            <span class="tag tag-teal">HTML / CSS</span>
+            <span class="tag tag-teal">Jira</span>
+            <span class="tag tag-teal">Azure DevOps</span>
+            <span class="tag tag-teal">Material Design</span>
+            <span class="tag tag-teal">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Metodologias</h4>
+          <div class="tags">
+            <span class="tag tag-gray">Agile / Scrum</span>
+            <span class="tag tag-gray">Kanban</span>
+            <span class="tag tag-gray">Double Diamond</span>
+            <span class="tag tag-gray">Design Thinking</span>
+            <span class="tag tag-gray">Co-criação</span>
+            <span class="tag tag-gray">Enterprise Design Thinking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-header-icon icon-navy">◉</span>
+      <span class="card-title">Experiência</span>
+    </div>
+    <div class="card-body" style="padding-top:16px">
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-company">IBM</div>
+            <div class="exp-role">UX/UI Designer · Business Analyst · Consultora Salesforce em Telecom</div>
+            <div class="exp-location">Remoto</div>
+          </div>
+          <div class="exp-period">set 2021 – presente<br /><span style="color:#0b827c;font-weight:600">4 anos+</span></div>
+          <div class="exp-desc">
+            <ul>
+              <li>Atuação cross em múltiplas jornadas de atendimento (PME e PF) em grande operadora de Telecom.</li>
+              <li>Liderança E2E: facilitação de oficinas de co-criação, mapeamento de jornadas e testes de usabilidade (presenciais e remotos).</li>
+              <li>Escrita detalhada de <strong>User Stories, cenários de aceite</strong> e refinamento técnico/funcional com equipes de desenvolvimento.</li>
+              <li>Definição de melhores práticas com <strong>Salesforce SLDS e Vlocity</strong> para otimizar jornadas de atendimento.</li>
+              <li>Imersão em campo (BSim) para validar dores reais de clientes e operadores.</li>
+              <li>Adequação de Design Systems institucionais às diretrizes do Salesforce Lightning Design System.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-company">Vortigo Digital</div>
+            <div class="exp-role">Analista UI/UX — Projeto Mobile para Seguradora</div>
+            <div class="exp-location">Porto Alegre, RS</div>
+          </div>
+          <div class="exp-period">mai – ago 2021<br />4 meses</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Análise de usabilidade e arquitetura da informação para app mobile.</li>
+              <li>Criação de MVPs: fluxos, protótipos navegáveis e interfaces de alta fidelidade no Figma.</li>
+              <li>Handoff com framework ágil, Material Design e Bootstrap; gestão via Jira e Azure DevOps.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-company">PROCERGS</div>
+            <div class="exp-role">UX/UI Designer — Projeto IPE Saúde</div>
+            <div class="exp-location">Porto Alegre, RS</div>
+          </div>
+          <div class="exp-period">nov 2019 – mai 2021<br />1 ano 7 meses</div>
+          <div class="exp-desc">
+            <ul>
+              <li>UX Research: benchmarking e análise de stakeholders.</li>
+              <li>Mapa de empatia, arquitetura da informação e wireframes de baixa, média e alta fidelidade.</li>
+              <li>Metodologia ágil Kanban com Azure DevOps.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div>
+            <div class="exp-company">MStech</div>
+            <div class="exp-role">UI Designer</div>
+            <div class="exp-location">Porto Alegre, RS</div>
+          </div>
+          <div class="exp-period">abr – out 2019<br />7 meses</div>
+          <div class="exp-desc">Desenvolvimento e manutenção de layouts de hotsites e portais de clientes; criação de ilustrações e objetos gráficos.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-header-icon icon-teal">▲</span>
+      <span class="card-title">Formação Acadêmica</span>
+    </div>
+    <div class="card-body" style="padding-top:14px">
+      <div class="edu-list">
+        <div class="edu-item">
+          <div>
+            <div class="edu-school">UNESC Digital</div>
+            <div class="edu-course">Pós-graduação · Experiência do Usuário e Design de Experiência</div>
+          </div>
+          <div class="edu-period">set 2021 – mar 2022</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-school">Universidade Federal do Rio Grande do Sul — UFRGS</div>
+            <div class="edu-course">Bacharelado em Design Visual</div>
+          </div>
+          <div class="edu-period">2015 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-school">Universidade Feevale</div>
+            <div class="edu-course">Bacharelado em Design</div>
+          </div>
+          <div class="edu-period">2011 – 2015</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-icon icon-blue">✓</span>
+        <span class="card-title">Certificações</span>
+      </div>
+      <div class="card-body">
+        <div class="cert-list">
+          <div class="cert-item"><div class="cert-dot"></div>Enterprise Design Thinking Practitioner — IBM</div>
+          <div class="cert-item"><div class="cert-dot"></div>IBM Garage Essentials</div>
+          <div class="cert-item"><div class="cert-dot"></div>Fundamentos do Scrum</div>
+          <div class="cert-item"><div class="cert-dot"></div>Como Passar do Modelo em Cascata ao Ágil na Gestão de Projetos</div>
+          <div class="cert-item"><div class="cert-dot"></div>Storytelling e Design de Apresentações</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-header-icon icon-gold">★</span>
+        <span class="card-title">Prêmios &amp; Reconhecimentos</span>
+      </div>
+      <div class="card-body">
+        <div class="award-list">
+          <div class="award-item"><div class="award-dot"></div><span><strong>Quarterly Cash Award — Client &amp; Partner Success</strong><br /><span style="color:var(--sf-muted);font-size:12px">IBM · 2024</span></span></div>
+          <div class="award-item"><div class="award-dot"></div><span><strong>Prêmio Bornancini 2014</strong><br /><span style="color:var(--sf-muted);font-size:12px">Categoria Produto / Ferramenta</span></span></div>
+          <div class="award-item"><div class="award-dot"></div><span><strong>9º Salão do Jovem Designer 2014</strong></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-header-icon icon-purple">◆</span>
+      <span class="card-title">Idiomas</span>
+    </div>
+    <div class="card-body">
+      <div class="lang-list">
+        <div class="lang-item">
+          <div class="lang-name">Português</div>
+          <div class="lang-level">Nativo</div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-name">Espanhol</div>
+          <div class="lang-level">Avançado</div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-name">Inglês</div>
+          <div class="lang-level">Em formação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>Made with IBM Bob</p>
+</footer>
+
 </body>
-
 </html>
