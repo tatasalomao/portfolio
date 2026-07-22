@@ -39,130 +39,62 @@
 
   .topbar { background: var(--sf-navy); height: 6px; }
 
-  /* ── HERO (igual ao portfólio) ── */
   .hero { background: var(--sf-white); border-bottom: 1px solid var(--sf-border); }
-  .hero-banner {
-    background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue) 100%);
-    height: 110px;
-  }
+  .hero-banner { background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue) 100%); height: 110px; }
   .hero-body { max-width: 760px; margin: 0 auto; padding: 0 24px 32px; }
-  .avatar {
-    width: 96px; height: 96px; border-radius: 50%;
-    background: var(--sf-white); color: var(--sf-blue);
-    font-size: 30px; font-weight: 700;
-    display: inline-flex; align-items: center; justify-content: center;
-    border: 4px solid var(--sf-white);
-    position: relative; top: -48px; margin-bottom: -28px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15); letter-spacing: 1px;
-  }
+  .avatar { width: 96px; height: 96px; border-radius: 50%; background: var(--sf-white); color: var(--sf-blue); font-size: 30px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; border: 4px solid var(--sf-white); position: relative; top: -48px; margin-bottom: -28px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); letter-spacing: 1px; }
   .hero-info { padding-top: 8px; }
   .hero h1 { font-size: 26px; font-weight: 700; color: var(--sf-navy); letter-spacing: -0.2px; margin-bottom: 4px; }
   .hero .headline { font-size: 14px; color: var(--sf-muted); margin-bottom: 4px; }
   .hero .location { font-size: 13px; color: var(--sf-muted); margin-bottom: 20px; }
   .contact-links { display: flex; gap: 8px; flex-wrap: wrap; }
-  .btn-contact {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 14px; border: 1px solid var(--sf-blue); border-radius: 4px;
-    font-size: 13px; font-weight: 600; color: var(--sf-blue);
-    background: var(--sf-white); transition: background 0.15s;
-  }
+  .btn-contact { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1px solid var(--sf-blue); border-radius: 4px; font-size: 13px; font-weight: 600; color: var(--sf-blue); background: var(--sf-white); transition: background 0.15s; }
   .btn-contact:hover { background: var(--sf-blue-light); text-decoration: none; }
   .btn-contact.primary { background: var(--sf-blue); color: var(--sf-white); }
   .btn-contact.primary:hover { background: var(--sf-blue-dark); }
   .btn-contact.active { background: var(--sf-navy); color: var(--sf-white); border-color: var(--sf-navy); }
-  .btn-contact.disabled { color: var(--sf-muted); border-color: var(--sf-border); background: var(--sf-cloud); opacity: 0.75; }
 
-  /* ── WRAPPER ── */
   .wrapper { max-width: 760px; margin: 0 auto; padding: 28px 24px 80px; display: flex; flex-direction: column; gap: 20px; }
 
-  /* ── CASE ACCORDION (details/summary) ── */
-  .case-accordion {
-    background: var(--sf-white);
-    border: 1px solid var(--sf-border);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .case-accordion > summary {
-    list-style: none;
-    cursor: pointer;
-    outline: none;
-  }
+  .case-accordion { background: var(--sf-white); border: 1px solid var(--sf-border); border-radius: 6px; overflow: hidden; }
+  .case-accordion > summary { list-style: none; cursor: pointer; outline: none; }
   .case-accordion > summary::-webkit-details-marker { display: none; }
 
-  /* cabeçalho sempre visível */
-  .case-summary-inner {
-    background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue) 100%);
-    padding: 24px 28px 22px;
-    color: var(--sf-white);
-    position: relative;
-  }
+  .case-summary-inner { background: linear-gradient(135deg, var(--sf-navy) 0%, var(--sf-blue) 100%); padding: 24px 28px 22px; color: var(--sf-white); }
   .case-number { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
   .case-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
   .case-title { font-size: 18px; font-weight: 700; line-height: 1.35; margin-bottom: 14px; flex: 1; }
-  .case-arrow {
-    width: 28px; height: 28px; flex-shrink: 0;
-    border-radius: 50%; background: rgba(255,255,255,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 13px; color: var(--sf-white); margin-top: 2px;
-    transition: transform 0.2s;
-  }
+  .case-arrow { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--sf-white); margin-top: 2px; transition: transform 0.2s; }
   .case-accordion[open] .case-arrow { transform: rotate(180deg); }
   .case-meta { display: flex; flex-wrap: wrap; gap: 8px; }
-  .case-badge {
-    font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px;
-    background: rgba(255,255,255,0.18); color: var(--sf-white);
-    border: 1px solid rgba(255,255,255,0.3);
-  }
+  .case-badge { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px; background: rgba(255,255,255,0.18); color: var(--sf-white); border: 1px solid rgba(255,255,255,0.3); }
 
-  /* métricas — sempre visíveis (dentro do summary) */
-  .metrics-row {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--sf-border);
-    background: var(--sf-white);
-  }
+  .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--sf-border); background: var(--sf-white); }
   .metric-cell { padding: 16px 12px; border-right: 1px solid var(--sf-border); text-align: center; }
   .metric-cell:last-child { border-right: none; }
   .metric-value { font-size: 22px; font-weight: 700; color: var(--sf-blue); line-height: 1.2; }
   .metric-value.green { color: var(--sf-green); }
   .metric-label { font-size: 11px; color: var(--sf-muted); margin-top: 3px; line-height: 1.3; }
 
-  /* conteúdo expandido */
-  .case-content {
-    border-top: 2px solid var(--sf-blue-light);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
+  .case-content { border-top: 2px solid var(--sf-blue-light); padding: 24px; display: flex; flex-direction: column; gap: 28px; }
 
-  /* ── SECTION ── */
   .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px; color: var(--sf-muted); border-bottom: 2px solid var(--sf-border); padding-bottom: 6px; margin-bottom: 14px; }
   .section-title { font-size: 14px; font-weight: 700; color: var(--sf-navy); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
   .s-icon { width: 20px; height: 20px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--sf-white); flex-shrink: 0; }
-  .s-navy { background: var(--sf-navy); }
-  .s-red  { background: #c23928; }
-  .s-blue { background: var(--sf-blue); }
-  .s-teal { background: var(--sf-teal); }
-  .s-green{ background: var(--sf-green); }
-  .s-gold { background: var(--sf-gold); }
-  .s-purple{ background: var(--sf-purple); }
+  .s-navy { background: var(--sf-navy); } .s-red { background: #c23928; } .s-blue { background: var(--sf-blue); }
+  .s-teal { background: var(--sf-teal); } .s-green { background: var(--sf-green); } .s-gold { background: var(--sf-gold); } .s-purple { background: var(--sf-purple); }
 
-  /* ── CONTEXT ── */
   .context-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .context-item h4 { font-size: 12px; font-weight: 700; color: var(--sf-label); margin-bottom: 6px; }
   .context-item p, .context-item li { font-size: 13px; color: var(--sf-label); line-height: 1.6; }
-  .context-item ul { padding-left: 16px; }
-  .context-item li { margin-bottom: 2px; }
+  .context-item ul { padding-left: 16px; } .context-item li { margin-bottom: 2px; }
 
-  /* ── PROBLEM ── */
   .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .problem-card { background: #fff8f7; border: 1px solid #fdddd9; border-radius: 6px; padding: 12px 14px; }
   .problem-card h4 { font-size: 12px; font-weight: 700; color: #c23928; margin-bottom: 5px; }
   .problem-card li { font-size: 12px; color: var(--sf-label); line-height: 1.55; margin-bottom: 2px; }
   .problem-card ul { padding-left: 14px; }
 
-  /* ── SOLUTION ── */
   .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
   .solution-block { background: var(--sf-blue-light); border: 1px solid #c5dff5; border-radius: 6px; padding: 12px 14px; }
   .solution-block h4 { font-size: 11px; font-weight: 700; color: var(--sf-blue-dark); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -175,53 +107,46 @@
   .flow-content h4 { font-size: 13px; font-weight: 700; color: var(--sf-navy); margin-bottom: 2px; }
   .flow-content p { font-size: 13px; color: var(--sf-label); line-height: 1.55; }
 
-  /* ── EXAMPLE ── */
   .example-box { border: 1px solid var(--sf-border); border-radius: 6px; overflow: hidden; }
   .ex-header { padding: 8px 14px; font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 0.5px; }
   .ex-input { padding: 12px 14px; background: #fffbe6; border-bottom: 1px solid var(--sf-border); font-size: 13px; color: var(--sf-label); font-style: italic; }
   .ex-output { padding: 14px; font-size: 12px; color: var(--sf-label); line-height: 1.65; font-family: "Courier New", monospace; white-space: pre-wrap; background: var(--sf-cloud); }
   .ex-time { padding: 8px 14px; background: var(--sf-green-bg); border-top: 1px solid #c3e6cb; font-size: 12px; font-weight: 700; color: var(--sf-green); }
 
-  /* ── RESULTS ── */
   .results-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
   .results-table th { background: var(--sf-cloud); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--sf-muted); padding: 9px 12px; text-align: left; border-bottom: 2px solid var(--sf-border); }
   .results-table td { padding: 9px 12px; font-size: 13px; border-bottom: 1px solid var(--sf-border); color: var(--sf-label); }
   .results-table tr:last-child td { border-bottom: none; }
-  .before { color: #c23928; font-weight: 600; }
-  .after  { color: var(--sf-green); font-weight: 600; }
-  .gain   { color: var(--sf-blue); font-weight: 700; }
+  .before { color: #c23928; font-weight: 600; } .after { color: var(--sf-green); font-weight: 600; } .gain { color: var(--sf-blue); font-weight: 700; }
+
   .roi-box { background: var(--sf-gold-bg); border: 1px solid #f0d090; border-radius: 6px; padding: 14px 20px; display: flex; gap: 28px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
   .roi-item { text-align: center; }
   .roi-value { font-size: 20px; font-weight: 700; color: var(--sf-gold); }
   .roi-label { font-size: 11px; color: var(--sf-muted); margin-top: 2px; }
+
   .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .qual-item { display: flex; align-items: flex-start; gap: 8px; background: var(--sf-green-bg); border: 1px solid #c3e6cb; border-radius: 6px; padding: 10px 12px; font-size: 13px; color: var(--sf-label); line-height: 1.5; }
 
-  /* ── LESSONS ── */
   .lessons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .lesson-block { border-radius: 6px; padding: 14px; border: 1px solid; }
-  .lesson-block.green  { background: var(--sf-green-bg); border-color: #c3e6cb; }
+  .lesson-block.green { background: var(--sf-green-bg); border-color: #c3e6cb; }
   .lesson-block.yellow { background: #fffbe6; border-color: #f0d090; }
   .lesson-block h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-  .lesson-block.green h4  { color: var(--sf-green); }
-  .lesson-block.yellow h4 { color: var(--sf-gold); }
+  .lesson-block.green h4 { color: var(--sf-green); } .lesson-block.yellow h4 { color: var(--sf-gold); }
   .lesson-block li { font-size: 12px; color: var(--sf-label); margin-bottom: 4px; line-height: 1.55; }
   .lesson-block ul { padding-left: 14px; }
 
-  /* ── NEXT ── */
   .next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .next-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sf-blue); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid var(--sf-blue-light); }
   .next-col li { font-size: 12px; color: var(--sf-label); margin-bottom: 5px; line-height: 1.5; list-style: none; display: flex; gap: 6px; }
   .check { color: var(--sf-muted); flex-shrink: 0; }
 
-  /* ── TAGS ── */
   .tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .tag { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 12px; }
   .tag-blue { background: var(--sf-blue-light); color: var(--sf-blue-dark); }
   .tag-teal { background: #e0f5f4; color: #0b6b66; }
   .tag-gray { background: #f3f2f2; color: var(--sf-label); }
 
-  /* ── COMING SOON ── */
   .coming-soon { border: 2px dashed var(--sf-border); border-radius: 6px; padding: 40px 24px; text-align: center; color: var(--sf-muted); }
   .coming-soon h3 { font-size: 15px; font-weight: 600; color: var(--sf-label); margin-bottom: 4px; margin-top: 8px; }
   .coming-soon p { font-size: 13px; }
@@ -230,15 +155,13 @@
 
   @media (max-width: 580px) {
     .metrics-row { grid-template-columns: repeat(2,1fr); }
-    .context-grid, .problem-grid, .solution-grid,
-    .qual-grid, .lessons-grid, .next-grid { grid-template-columns: 1fr; }
+    .context-grid, .problem-grid, .solution-grid, .qual-grid, .lessons-grid, .next-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <div class="topbar"></div>
-
 
 <div class="hero">
   <div class="hero-banner"></div>
@@ -263,66 +186,35 @@
   
   <details class="case-accordion">
     <summary>
-      
       <div class="case-summary-inner">
-        <div class="case-number">Case 01</div>
+        <div class="case-number">Case Assistente IA</div>
         <div class="case-title-row">
-          <div class="case-title">Como um Assistente IA Reduziu em 80% o Tempo de Criação de User Stories no Base Residencial Claro</div>
+          <div class="case-title">Como um Assistente IA Reduziu em 80% o Tempo de Criação de User Stories no Base Residencial Telecom</div>
           <div class="case-arrow">▼</div>
         </div>
         <div class="case-meta">
           <span class="case-badge">IBM · Telecom BR</span>
-          <span class="case-badge">Janeiro 2026</span>
+          <span class="case-badge">Dezembro 2025</span>
           <span class="case-badge">IA Generativa · Salesforce</span>
           <span class="case-badge">UX · Business Analysis</span>
         </div>
       </div>
-      
       <div class="metrics-row">
-        <div class="metric-cell">
-          <div class="metric-value">−80%</div>
-          <div class="metric-label">Tempo de criação de User Stories</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-value green">85%</div>
-          <div class="metric-label">Aprovação na 1ª revisão</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-value">−70%</div>
-          <div class="metric-label">Tempo de onboarding de BAs</div>
-        </div>
-        <div class="metric-cell">
-          <div class="metric-value green">R$96k</div>
-          <div class="metric-label">Economia estimada por mês</div>
-        </div>
+        <div class="metric-cell"><div class="metric-value">−80%</div><div class="metric-label">Tempo de criação de User Stories</div></div>
+        <div class="metric-cell"><div class="metric-value green">85%</div><div class="metric-label">Aprovação na 1ª revisão</div></div>
+        <div class="metric-cell"><div class="metric-value">−70%</div><div class="metric-label">Tempo de onboarding de BAs</div></div>
+        <div class="metric-cell"><div class="metric-value green">R$96k</div><div class="metric-label">Economia estimada por mês</div></div>
       </div>
     </summary>
-
-    
     <div class="case-content">
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-navy">◉</span> Contexto</div>
         <div class="context-grid">
-          <div class="context-item">
-            <h4>O Projeto</h4>
-            <p>Squad de Base Residencial da <strong>Telecom BR (IBM)</strong>, responsável por jornadas de negociação de banda larga, TV e serviços convergentes no <strong>Salesforce CRM</strong>.</p>
-          </div>
-          <div class="context-item">
-            <h4>A Equipe — 9 pessoas</h4>
-            <ul>
-              <li>1 Product Owner</li>
-              <li>1 UX / Líder de Refinamento Funcional</li>
-              <li>2 Desenvolvedores · 1 QA · 1 Arquiteto</li>
-              <li>2 Business Analysts · 2 Consultores</li>
-            </ul>
-          </div>
+          <div class="context-item"><h4>O Projeto</h4><p>Squad de Base Residencial da <strong> Telecom BR (IBM)</strong>, responsável por jornadas de negociação de banda larga, TV e serviços convergentes no <strong>Solar (Salesforce CRM)</strong>.</p></div>
+          <div class="context-item"><h4>A Equipe — 9 pessoas</h4><ul><li>1 Product Owner</li><li>1 UX / Líder de Refinamento Funcional</li><li>2 Desenvolvedores · 1 QA · 1 Arquiteto</li><li>2 Business Analysts · 2 Consultores</li></ul></div>
         </div>
-        <p style="font-size:13px;color:var(--sf-label);margin-top:12px"><strong>Meu papel:</strong> UX/UI Designer e Líder de Refinamento Funcional — criação do assistente, curadoria da base de conhecimento, prompt engineering e adoção pelo time.</p>
+        <p style="font-size:13px;color:var(--sf-label);margin-top:12px"><strong>Meu papel:</strong> UX e Líder de Refinamento Funcional — criação do assistente, curadoria da base de conhecimento, prompt engineering e adoção pelo time.</p>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-red">!</span> O Problema</div>
         <p style="font-size:13px;color:var(--sf-label);margin-bottom:12px">Squad recém-formada, sem histórico de entregas. Era preciso acelerar a curva de aprendizado e garantir consistência desde a sprint 1.</p>
@@ -333,8 +225,6 @@
           <div class="problem-card"><h4>④ Risco funcional</h4><ul><li>Regras críticas esquecidas</li><li>Sem rastreabilidade Discovery → US</li><li>Difícil alinhar Móvel e Residencial</li></ul></div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-blue">⚡</span> A Solução</div>
         <p style="font-size:13px;color:var(--sf-label);margin-bottom:14px">Criação de um <strong>assistente IA conversacional especializado</strong> em criar, revisar, completar e validar User Stories do Base Residencial Claro.</p>
@@ -350,8 +240,6 @@
           <div class="flow-item"><div class="flow-num">3</div><div class="flow-content"><h4>Validação de Completude (PO)</h4><p>PO usa antes de aprovar → Assistente cruza com Discovery e aponta gaps → Reduz ciclos de revisão PO ↔ BA.</p></div></div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-teal">▶</span> Exemplo Real de US Gerada</div>
         <div class="example-box">
@@ -383,8 +271,6 @@ CENÁRIOS DE TESTE:
           <div class="ex-time">⏱ Criação: 6–8h  ·  Antes: 3 dias  ·  Redução: −80%</div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-green">★</span> Resultados</div>
         <div class="section-label">Impacto Quantitativo</div>
@@ -411,90 +297,145 @@ CENÁRIOS DE TESTE:
           <div class="qual-item">✅ <span><strong>Autonomia desde o dia 1</strong> — BAs novos entregam qualidade na sprint 1</span></div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-gold">◆</span> Lições Aprendidas</div>
         <div class="lessons-grid">
-          <div class="lesson-block green">
-            <h4>✅ O que funcionou muito bem</h4>
-            <ul>
-              <li>Curadoria de conhecimento é chave</li>
-              <li>Prompt engineering iterativo (5 versões)</li>
-              <li>Integração com Word e Octane acelerou adoção 3×</li>
-              <li>Posicionar como "par de refinamento", não substituto</li>
-            </ul>
-          </div>
-          <div class="lesson-block yellow">
-            <h4>🔄 Faríamos diferente</h4>
-            <ul>
-              <li>Reorganizar Discovery antes de alimentar o assistente</li>
-              <li>Separar RNs por Feature e criar índice por jornada</li>
-              <li>Adicionar exemplos de US prontas como referência</li>
-              <li>Criar biblioteca de prompts desde o início</li>
-            </ul>
-          </div>
+          <div class="lesson-block green"><h4>✅ O que funcionou muito bem</h4><ul><li>Curadoria de conhecimento é chave</li><li>Prompt engineering iterativo (5 versões)</li><li>Integração com Word e Octane acelerou adoção 3×</li><li>Posicionar como "par de refinamento", não substituto</li></ul></div>
+          <div class="lesson-block yellow"><h4>🔄 Faríamos diferente</h4><ul><li>Reorganizar Discovery antes de alimentar o assistente</li><li>Separar RNs por Feature e criar índice por jornada</li><li>Adicionar exemplos de US prontas como referência</li><li>Criar biblioteca de prompts desde o início</li></ul></div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-title"><span class="s-icon s-purple">▶</span> Próximos Passos</div>
         <div class="next-grid">
-          <div class="next-col">
-            <h4>Curto prazo</h4>
-            <ul>
-              <li><span class="check">○</span>Treinamento formal para BAs</li>
-              <li><span class="check">○</span>Biblioteca de prompts</li>
-              <li><span class="check">○</span>Apresentação para PO</li>
-            </ul>
-          </div>
-          <div class="next-col">
-            <h4>Médio prazo</h4>
-            <ul>
-              <li><span class="check">○</span>Integração nativa com Octane</li>
-              <li><span class="check">○</span>Expansão para TV e Móvel</li>
-              <li><span class="check">○</span>Validação automática via API</li>
-            </ul>
-          </div>
-          <div class="next-col">
-            <h4>Longo prazo</h4>
-            <ul>
-              <li><span class="check">○</span>Geração automática de testes</li>
-              <li><span class="check">○</span>Dashboard de qualidade de US</li>
-              <li><span class="check">○</span>Motor de recomendação</li>
-            </ul>
-          </div>
+          <div class="next-col"><h4>Curto prazo</h4><ul><li><span class="check">○</span>Treinamento formal para BAs</li><li><span class="check">○</span>Biblioteca de prompts</li><li><span class="check">○</span>Apresentação para PO</li></ul></div>
+          <div class="next-col"><h4>Médio prazo</h4><ul><li><span class="check">○</span>Integração nativa com Octane</li><li><span class="check">○</span>Expansão para TV e Móvel</li><li><span class="check">○</span>Validação automática via API</li></ul></div>
+          <div class="next-col"><h4>Longo prazo</h4><ul><li><span class="check">○</span>Geração automática de testes</li><li><span class="check">○</span>Dashboard de qualidade de US</li><li><span class="check">○</span>Motor de recomendação</li></ul></div>
         </div>
       </div>
-
-      
       <div>
         <div class="section-label">Tecnologias &amp; Competências</div>
         <div class="tags">
-          <span class="tag tag-blue">IBM Consulting Advantage</span>
-          <span class="tag tag-blue">GPT-4</span>
-          <span class="tag tag-blue">RAG</span>
-          <span class="tag tag-blue">IA Generativa</span>
-          <span class="tag tag-teal">Salesforce SLDS</span>
-          <span class="tag tag-teal">Vlocity</span>
-          <span class="tag tag-teal">Octane</span>
-          <span class="tag tag-gray">User Stories</span>
-          <span class="tag tag-gray">Business Analysis</span>
-          <span class="tag tag-gray">Prompt Engineering</span>
-          <span class="tag tag-gray">Service Design</span>
-          <span class="tag tag-gray">Metodologia Ágil</span>
+          <span class="tag tag-blue">IBM Cloud Assistant</span><span class="tag tag-blue">GPT-4</span><span class="tag tag-blue">RAG</span><span class="tag tag-blue">IA Generativa</span>
+          <span class="tag tag-teal">Salesforce SLDS</span><span class="tag tag-teal">Octane</span>
+          <span class="tag tag-gray">User Stories</span><span class="tag tag-gray">Business Analysis</span><span class="tag tag-gray">Prompt Engineering</span><span class="tag tag-gray">Service Design</span><span class="tag tag-gray">Metodologia Ágil</span>
         </div>
       </div>
+    </div>
+  </details>
 
+  
+  <details class="case-accordion">
+    <summary>
+      <div class="case-summary-inner">
+        <div class="case-number">Case UX/UI Designer</div>
+        <div class="case-title-row">
+          <div class="case-title">Modernização da Jornada de Retenção e Rentabilização Móvel — do Legado ao Salesforce CRM</div>
+          <div class="case-arrow">▼</div>
+        </div>
+        <div class="case-meta">
+          <span class="case-badge">Grande Operadora de Telecom · IBM</span>
+          <span class="case-badge">Set/2021 – Fev/2024</span>
+          <span class="case-badge">UX/UI Design · Salesforce</span>
+          <span class="case-badge">Double Diamond</span>
+        </div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric-cell"><div class="metric-value green">58</div><div class="metric-label">User Stories entregues</div></div>
+        <div class="metric-cell"><div class="metric-value">36</div><div class="metric-label">Componentes criados</div></div>
+        <div class="metric-cell"><div class="metric-value green">66+</div><div class="metric-label">Operadores testados</div></div>
+        <div class="metric-cell"><div class="metric-value">100%</div><div class="metric-label">Implantação em produção</div></div>
+      </div>
+    </summary>
+    <div class="case-content">
+      <div>
+        <div class="section-title"><span class="s-icon s-navy">◉</span> Contexto</div>
+        <div class="context-grid">
+          <div class="context-item"><h4>O Projeto</h4><p>Transição de uma operação de atendimento de <strong>3 a 4 sistemas legados fragmentados</strong> para uma solução única no <strong>Salesforce CRM</strong>, cobrindo as jornadas de Retenção e Rentabilização Móvel (Canais Atendidos / Call Center).</p></div>
+          <div class="context-item"><h4>Escopo</h4><ul><li>Retenção e Rentabilização Móvel</li><li>Canais Atendidos / Call Center</li><li>3 de 5 Épicos concluídos</li><li>12 de 18 Features desenvolvidas</li></ul></div>
+        </div>
+        <p style="font-size:13px;color:var(--sf-label);margin-top:12px"><strong>Meu papel:</strong> UX/UI Designer — responsável pelo 2º Diamante (Desenvolver &amp; Entregar): prototipagem, design system, co-criação com squad, testes de usabilidade e governança com Design Critique.</p>
+      </div>
+      <div>
+        <div class="section-title"><span class="s-icon s-red">!</span> O Problema</div>
+        <p style="font-size:13px;color:var(--sf-label);margin-bottom:12px">Os atendentes de call center precisavam alternar entre múltiplos sistemas para realizar um único atendimento, gerando fricção operacional e experiência inconsistente.</p>
+        <div class="problem-grid">
+          <div class="problem-card"><h4>① Alta Carga Cognitiva</h4><ul><li>Telas poluídas com pouca hierarquia visual</li><li>Excesso de informações irrelevantes para o momento do atendimento</li></ul></div>
+          <div class="problem-card"><h4>② Morosidade Operacional</h4><ul><li>Lentidão na navegação entre múltiplos sistemas</li><li>Aumento do tempo médio de atendimento</li><li>Maior atrito com o cliente final</li></ul></div>
+          <div class="problem-card"><h4>③ Treinamentos Longos</h4><ul><li>Curva de aprendizado extensa para novos operadores</li><li>Alta dependência de especialistas para suporte</li></ul></div>
+          <div class="problem-card"><h4>④ Fragmentação de Sistemas</h4><ul><li>3 a 4 ferramentas legadas sem integração</li><li>Dados duplicados e inconsistentes entre sistemas</li></ul></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><span class="s-icon s-blue">⚡</span> Processo — Double Diamond</div>
+        <p style="font-size:13px;color:var(--sf-label);margin-bottom:14px">O projeto utilizou a abordagem <strong>Double Diamond</strong> dividida entre equipes especializadas, com atuação focada no 2º diamante.</p>
+        <div class="solution-grid">
+          <div class="solution-block"><h4>1º Diamante — CX &amp; Research</h4><ul><li>Entrevistas e Blueprints de serviço</li><li>7 oportunidades de negócio mapeadas</li><li>3 oportunidades priorizadas</li></ul></div>
+          <div class="solution-block"><h4>2º Diamante — UX/UI (minha atuação)</h4><ul><li>Co-criação com Squad, PO, BA e PMO</li><li>Prototipagem alta fidelidade (Adobe XD → Figma)</li><li>Governança com Design Critique</li></ul></div>
+          <div class="solution-block"><h4>Ferramentas</h4><ul><li>Adobe XD (até jan/2023)</li><li>Figma (a partir de jan/2023)</li><li>Salesforce SLDS</li><li>Jira · Azure DevOps</li></ul></div>
+        </div>
+        <div class="section-label">Princípios da Solução Visual</div>
+        <div class="flows">
+          <div class="flow-item"><div class="flow-num">1</div><div class="flow-content"><h4>Reconhecer em vez de Lembrar</h4><p>Substituição de textos densos por ícones intuitivos, reduzindo o esforço cognitivo do operador durante o atendimento.</p></div></div>
+          <div class="flow-item"><div class="flow-num">2</div><div class="flow-content"><h4>Redução do Ruído Visual</h4><p>Eliminação de linhas e divisores desnecessários. Agrupamento lógico de informações correlatas para facilitar a leitura rápida.</p></div></div>
+          <div class="flow-item"><div class="flow-num">3</div><div class="flow-content"><h4>Destaque para Dados Críticos</h4><p>Evidência do status do titular e valores em reais — informações essenciais para decisão rápida durante negociação.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><span class="s-icon s-teal">▶</span> Validação e Testes de Usabilidade</div>
+        <div class="solution-grid">
+          <div class="solution-block"><h4>Amostragem Diversificada</h4><ul><li>3 perfis Sêniores por rodada</li><li>3 perfis Juniores por rodada</li><li>Diferentes áreas de atendimento</li></ul></div>
+          <div class="solution-block"><h4>Escala dos Testes</h4><ul><li>62+ testes remotos</li><li>4 testes presenciais</li><li>9 áreas distintas do sistema</li></ul></div>
+          <div class="solution-block"><h4>BSim (Business Simulation)</h4><ul><li>Simulação operacional presencial</li><li>Acompanhamento in loco maio/2022</li><li>Validação com operadores reais</li></ul></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><span class="s-icon s-green">★</span> Entregas e Resultados</div>
+        <div class="section-label">Métricas de Entrega (Set/21 – Fev/24)</div>
+        <table class="results-table">
+          <thead><tr><th>Item</th><th>Entregue</th><th>Total Previsto</th><th>%</th></tr></thead>
+          <tbody>
+            <tr><td>Épicos concluídos</td><td class="after">3</td><td>5</td><td class="gain">60%</td></tr>
+            <tr><td>Features desenvolvidas</td><td class="after">12</td><td>18</td><td class="gain">67%</td></tr>
+            <tr><td>User Stories entregues</td><td class="after">58</td><td>73</td><td class="gain">79%</td></tr>
+            <tr><td>Componentes projetados</td><td class="after">36</td><td>—</td><td class="gain">3 sessões estratégicas</td></tr>
+          </tbody>
+        </table>
+        <div class="roi-box">
+          <div class="roi-item"><div class="roi-value">Jul/23</div><div class="roi-label">Entrada em produção em todas as EPSs</div></div>
+          <div class="roi-item"><div class="roi-value">100%</div><div class="roi-label">Operações cobertas</div></div>
+          <div class="roi-item"><div class="roi-value">66+</div><div class="roi-label">Operadores testados</div></div>
+        </div>
+        <div class="section-label" style="margin-top:16px">Impacto Qualitativo</div>
+        <div class="qual-grid">
+          <div class="qual-item">✅ <span><strong>Consolidação de sistemas</strong> — 3–4 ferramentas legadas substituídas por 1 no Salesforce</span></div>
+          <div class="qual-item">✅ <span><strong>Escalabilidade</strong> — Arquitetura adotada por outras jornadas da operadora</span></div>
+          <div class="qual-item">✅ <span><strong>Redução de carga cognitiva</strong> — Interface com hierarquia e clareza visual</span></div>
+          <div class="qual-item">✅ <span><strong>Implantação validada</strong> — Testes com +66 operadores antes do go-live</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><span class="s-icon s-gold">◆</span> Lições Aprendidas</div>
+        <div class="lessons-grid">
+          <div class="lesson-block green"><h4>✅ O que funcionou muito bem</h4><ul><li>Design Critique periódico com POs e Consultores Salesforce</li><li>BSim presencial — validação com operadores reais no campo</li><li>Migração para Figma acelerou colaboração e handoff</li><li>Perfis mistos nos testes (Sênior + Júnior) revelaram gaps importantes</li></ul></div>
+          <div class="lesson-block yellow"><h4>🔄 Pontos de atenção</h4><ul><li>Migração de ferramenta (XD → Figma) no meio do projeto exige replanejamento</li><li>Alinhamento entre jornadas Móvel e Residencial requer governança contínua</li><li>Restrições do Salesforce SLDS devem entrar no processo de design desde o início</li></ul></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Tecnologias &amp; Competências</div>
+        <div class="tags">
+          <span class="tag tag-teal">Salesforce SLDS</span>
+          <span class="tag tag-blue">Figma</span><span class="tag tag-blue">Adobe XD</span><span class="tag tag-blue">Prototipagem</span><span class="tag tag-blue">Design System</span>
+          <span class="tag tag-gray">Double Diamond</span><span class="tag tag-gray">Testes de Usabilidade</span><span class="tag tag-gray">UX Research</span><span class="tag tag-gray">Service Design</span><span class="tag tag-gray">User Stories</span>
+        </div>
+      </div>
     </div>
   </details>
 
   
   <div class="coming-soon">
     <div style="font-size:28px;color:var(--sf-border)">◻</div>
-    <h3>Cases 02 e 03 — Em breve</h3>
-    <p>Novos cases sendo preparados. Volte em breve!</p>
+    <h3>Case 03 — Em breve</h3>
+    <p>Novo case sendo preparado. Volte em breve!</p>
   </div>
 
 </div>
@@ -505,4 +446,5 @@ CENÁRIOS DE TESTE:
 
 </body>
 </html>
+
 
